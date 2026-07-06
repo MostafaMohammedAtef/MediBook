@@ -1,9 +1,130 @@
 <mxfile host="app.diagrams.net">
   <diagram name="Page-1" id="lDcpq4ph1QTvNTnBkLI5">
-    <mxGraphModel dx="1120" dy="527" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+    <mxGraphModel dx="1318" dy="620" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
+        <mxCell id="Hosp" parent="1" style="swimlane;fontStyle=1;align=center;verticalAlign=top;childLayout=stackLayout;horizontal=1;startSize=26;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;" value="Hospital" vertex="1">
+          <mxGeometry height="200" width="240" x="300" y="40" as="geometry" />
+        </mxCell>
+        <mxCell id="Hosp_Fields" parent="Hosp" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;" value="- patients: HashMap&amp;lt;string, Patient*&amp;gt;&#xa;- doctors: HashMap&amp;lt;string, Doctor*&amp;gt;&#xa;- appointments: priority_queue" vertex="1">
+          <mxGeometry height="60" width="240" y="26" as="geometry" />
+        </mxCell>
+        <mxCell id="Hosp_Div" parent="Hosp" style="line;strokeWidth=1;fillColor=none;align=left;verticalAlign=middle;spacingTop=-1;spacingLeft=3;spacingRight=3;rotatable=0;labelPosition=right;points=[];portConstraint=eastwest;" value="" vertex="1">
+          <mxGeometry height="8" width="240" y="86" as="geometry" />
+        </mxCell>
+        <mxCell id="Hosp_Methods" parent="Hosp" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;" value="+ registerPatient()&#xa;+ registerDoctor()&#xa;+ bookAppointment()&#xa;+ cancelAppointment()&#xa;+ showAllAppointments()&#xa;+ showDoctorSchedule()" vertex="1">
+          <mxGeometry height="106" width="240" y="94" as="geometry" />
+        </mxCell>
+        <mxCell id="Pat" parent="1" style="swimlane;fontStyle=1;align=center;verticalAlign=top;childLayout=stackLayout;horizontal=1;startSize=26;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;" value="Patient" vertex="1">
+          <mxGeometry height="170" width="160" x="40" y="400" as="geometry" />
+        </mxCell>
+        <mxCell id="Pat_Fields" parent="Pat" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;" value="- patientID: string&#xa;- name: string&#xa;- age: int&#xa;- phone: string" vertex="1">
+          <mxGeometry height="64" width="160" y="26" as="geometry" />
+        </mxCell>
+        <mxCell id="Pat_Div" parent="Pat" style="line;strokeWidth=1;fillColor=none;align=left;verticalAlign=middle;spacingTop=-1;spacingLeft=3;spacingRight=3;rotatable=0;labelPosition=right;points=[];portConstraint=eastwest;" value="" vertex="1">
+          <mxGeometry height="8" width="160" y="90" as="geometry" />
+        </mxCell>
+        <mxCell id="Pat_Methods" parent="Pat" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;" value="+ getID()&#xa;+ getName()&#xa;+ getAge()&#xa;+ getPhone()" vertex="1">
+          <mxGeometry height="72" width="160" y="98" as="geometry" />
+        </mxCell>
+        <mxCell id="Doc" parent="1" style="swimlane;fontStyle=1;align=center;verticalAlign=top;childLayout=stackLayout;horizontal=1;startSize=26;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;" value="Doctor" vertex="1">
+          <mxGeometry height="148" width="180" x="640" y="400" as="geometry" />
+        </mxCell>
+        <mxCell id="Doc_Fields" parent="Doc" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;" value="- doctorID: string&#xa;- name: string&#xa;- specialization: string" vertex="1">
+          <mxGeometry height="50" width="180" y="26" as="geometry" />
+        </mxCell>
+        <mxCell id="Doc_Div" parent="Doc" style="line;strokeWidth=1;fillColor=none;align=left;verticalAlign=middle;spacingTop=-1;spacingLeft=3;spacingRight=3;rotatable=0;labelPosition=right;points=[];portConstraint=eastwest;" value="" vertex="1">
+          <mxGeometry height="8" width="180" y="76" as="geometry" />
+        </mxCell>
+        <mxCell id="Doc_Methods" parent="Doc" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;" value="+ getID()&#xa;+ getName()&#xa;+ getSpecialization()" vertex="1">
+          <mxGeometry height="64" width="180" y="84" as="geometry" />
+        </mxCell>
+        <mxCell id="App" parent="1" style="swimlane;fontStyle=1;align=center;verticalAlign=top;childLayout=stackLayout;horizontal=1;startSize=26;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;" value="Appointment" vertex="1">
+          <mxGeometry height="278" width="220" x="310" y="320" as="geometry" />
+        </mxCell>
+        <mxCell id="App_Fields" parent="App" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;" value="- appointmentID: string&#xa;- patient: Patient*&#xa;- doctor: Doctor*&#xa;- date: string&#xa;- time: string&#xa;- status: string&#xa;- priority: string" vertex="1">
+          <mxGeometry height="110" width="220" y="26" as="geometry" />
+        </mxCell>
+        <mxCell id="App_Div" parent="App" style="line;strokeWidth=1;fillColor=none;align=left;verticalAlign=middle;spacingTop=-1;spacingLeft=3;spacingRight=3;rotatable=0;labelPosition=right;points=[];portConstraint=eastwest;" value="" vertex="1">
+          <mxGeometry height="8" width="220" y="136" as="geometry" />
+        </mxCell>
+        <mxCell id="App_Methods" parent="App" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;" value="+ getID()&#xa;+ getPatient()&#xa;+ getDoctor()&#xa;+ getDate()&#xa;+ getTime()&#xa;+ getStatus()&#xa;+ setStatus()&#xa;+ getSummary()" vertex="1">
+          <mxGeometry height="134" width="220" y="144" as="geometry" />
+        </mxCell>
+        <mxCell id="R_HP" edge="1" parent="1" source="Hosp" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;startArrow=diamondThin;startFill=1;endArrow=none;" target="Pat">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="120" y="133" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="m1" connectable="0" parent="R_HP" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" value="1" vertex="1">
+          <mxGeometry relative="1" x="-0.85" as="geometry">
+            <mxPoint x="-15" y="-10" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="m2" connectable="0" parent="R_HP" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" value="*" vertex="1">
+          <mxGeometry relative="1" x="0.85" as="geometry">
+            <mxPoint x="15" y="-10" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="R_HD" edge="1" parent="1" source="Hosp" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;startArrow=diamondThin;startFill=1;endArrow=none;" target="Doc">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="730" y="133" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="m3" connectable="0" parent="R_HD" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" value="1" vertex="1">
+          <mxGeometry relative="1" x="-0.85" as="geometry">
+            <mxPoint x="15" y="-10" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="m4" connectable="0" parent="R_HD" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" value="*" vertex="1">
+          <mxGeometry relative="1" x="0.85" as="geometry">
+            <mxPoint x="-15" y="-10" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="R_HA" edge="1" parent="1" source="Hosp" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;startArrow=diamondThin;startFill=1;endArrow=none;" target="App">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="m5" connectable="0" parent="R_HA" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" value="1" vertex="1">
+          <mxGeometry relative="1" x="-0.85" as="geometry">
+            <mxPoint x="-10" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="m6" connectable="0" parent="R_HA" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" value="*" vertex="1">
+          <mxGeometry relative="1" x="0.85" as="geometry">
+            <mxPoint x="-10" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="R_AP" edge="1" parent="1" source="App" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;startArrow=diamondThin;startFill=0;endArrow=none;" target="Pat">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="m7" connectable="0" parent="R_AP" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" value="*" vertex="1">
+          <mxGeometry relative="1" x="-0.85" as="geometry">
+            <mxPoint x="-15" y="-10" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="m8" connectable="0" parent="R_AP" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" value="1" vertex="1">
+          <mxGeometry relative="1" x="0.85" as="geometry">
+            <mxPoint x="15" y="-10" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="R_AD" edge="1" parent="1" source="App" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;startArrow=diamondThin;startFill=0;endArrow=none;" target="Doc">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="m9" connectable="0" parent="R_AD" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" value="*" vertex="1">
+          <mxGeometry relative="1" x="-0.85" as="geometry">
+            <mxPoint x="15" y="-10" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="m10" connectable="0" parent="R_AD" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" value="1" vertex="1">
+          <mxGeometry relative="1" x="0.85" as="geometry">
+            <mxPoint x="-15" y="-10" as="offset" />
+          </mxGeometry>
+        </mxCell>
       </root>
     </mxGraphModel>
   </diagram>
