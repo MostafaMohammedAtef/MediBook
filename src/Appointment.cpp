@@ -18,7 +18,7 @@ string Appointment::getStatus()
   return status;
 }
 
-void Appointment::setStatus(string status){this -> status = status}
+void Appointment::setStatus(string status) { this->status = status; }
 
 string Appointment::getSummary()
 {
