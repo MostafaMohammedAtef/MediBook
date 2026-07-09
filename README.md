@@ -3,29 +3,26 @@
 A Hospital Appointment Management System built in C++ using Object-Oriented Programming principles and Data Structures.
 
 ## Description
-MediBook automates patient registration, doctor scheduling, and appointment booking for a hospital. The system handles booking, cancellation, and schedule viewing through a CLI interface. Urgent appointments are prioritized using a priority queue.
+MediBook automates patient registration, doctor scheduling, and appointment booking for a hospital. The system handles booking, cancellation, and schedule viewing through a CLI interface. Urgent appointments are prioritized using a deque-based priority system.
 
 ## Features
 - Patient and doctor registration with auto-generated IDs
 - Appointment booking with priority levels (normal/urgent)
-- Appointment cancellation
+- Urgent appointments are automatically pushed to the front of the queue
+- Appointment cancellation with status tracking
 - View all appointments
-- View a specific doctor's schedule sorted by date and time
+- View a specific doctor's schedule
 
 ## Tech Stack
 - Language: C++
 - Concepts: OOP, Encapsulation, Composition, Aggregation
-- Data Structures: Priority Queue, HashMap, Sorting
+- Data Structures: Deque, HashMap
 
-## CLI Menu
-
-Register a Patient
-Register a Doctor
-Book an Appointment
-Cancel an Appointment
-Show All Appointments
-Show Doctor Schedule
-Exit
+## Planned Features
+- Interactive CLI menu for all operations
+- Patient and doctor registration
+- Appointment booking and cancellation
+- View all appointments and doctor schedules
 
 
 ## Project Structure
