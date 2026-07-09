@@ -36,6 +36,5 @@ MediBook/
 │   └── main.cpp
 ├── diagrams/
 │   └── MediBook.drawio
-├── .gitignore
 └── README.md
 ```
